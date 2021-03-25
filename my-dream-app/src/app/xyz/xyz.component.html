@@ -1,0 +1,37 @@
+<div>
+<table>
+    <tr>
+        <td><button (click)="changeColor('red')">Red</button></td>
+        <td><button (click)="changeColor('green')">Green</button></td>
+        <td [style.color]="color">Color me by these buttons!</td>
+    </tr>
+    <tr>
+        <td>Type some text inside this text box to see the two way binding in action: </td>
+        <td><input type="text" [(ngModel)]="twoWayBinding"/><button (click)="resetTwoWayBindingText()">Reset</button></td>
+        <td>{{twoWayBinding}}</td>
+    </tr>
+    <tr>
+        <td>This is data coming from the parent to child</td>
+        <td>{{dataFromParent}}</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>This data is ng-content</td><td><ng-content select="span"></ng-content></td><td></td>
+    </tr>
+    <tr>
+        <td>Press on this button to send data to parent</td>
+        <td><button (click)="callDataFromParentEvent()">Send Data</button></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>.ngif directive</td>
+        <td><button (click)="showHide()">{{flag?'Hide':'Show'}}</button></td>
+        <td><div *ngIf="flag">This block is shown, press again on the button to hide it!</div></td>
+    </tr>
+</table>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</div>

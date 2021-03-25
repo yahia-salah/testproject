@@ -1,0 +1,9 @@
+<p>switch-directive-example works!</p>
+<div *ngFor="let item of persons">
+<ul [ngSwitch]="item.country">
+<li *ngSwitchCase="'Canada'" [style.color]="'blue'">{{item.name}} from {{item.country}}</li>
+<li *ngSwitchCase="'Egypt'" [style.color]="'red'">{{item.name}} from {{item.country}}</li>
+<li *ngSwitchDefault [style.color]="'magenta'">{{item.name}} from {{item.country}}</li>
+</ul>
+</div>
+
